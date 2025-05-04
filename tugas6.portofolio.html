@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="bullying"/>
+  <title>Lawrence Chrome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+    }
+    header, footer {
+      background: hsla(164, 71%, 96%, 0.904);
+      color: #000;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #000;
+      text-decoration: none;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1rem;
+    }
+    article, .contact-form, .guestbook {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #fff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 800px;
+    }
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .about-content img {
+      max-width: 300px;
+      margin-left: 20px;
+      border-radius: 5px;
+    }
+    h2, h3 {
+      margin-bottom: 0.5rem;
+      text-align: left;
+      width: 100%;
+    }
+    p {
+      margin-top: 0;
+    }
+    .project-content, .multimedia-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+    .project-box, .multimedia-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    img.project-image {
+      max-width: 100%;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #706f6e;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: rgb(202, 255, 246);
+    }
+    audio, video {
+      width: 100%;
+      max-width: 100%;
+    }
+    .description {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .guestbook-entry {
+      background: #f2f2f2;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .guestbook-entry button {
+      margin-top: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      .project-content, .multimedia-content {
+        grid-template-columns: 1fr;
+      }
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-content img {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .video-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PORTOFOLIO</h1>
+    <nav>
+      <a href="#tentang">Tentang</a>
+      <a href="#project">Project</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#guestbook">Buku Tamu</a>
+      <a href="#media-api">Media API</a>
+    </nav>
+  </header>
+
+  <main>
+    <article id="tentang">
+      <div class="about-content">
+        <div>
+          <h2>Hello,</h2>
+          <h2>Saya Laurensia Viranti Putri</h2>
+          <p>Mahasiswa aktif Universitas Internasional Semen Indonesia dengan program studi sistem informasi. Saya memiliki hobi berolahraga dan mendesain.</p>
+        </div>
+        <img src="Profil.png" alt="Profile Picture">
+      </div>
+    </article>
+
+    <article id="project">
+      <h2>PROJEK</h2>
+      <div class="project-content">
+        <div class="project-box">
+          <p><strong>Projek 1:</strong> Bakery</p>
+          <img src="project1.jpg" alt="Project 1" class="project-image">
+        </div>
+        <div class="project-box">
+          <p><strong>Projek 2:</strong> Tanaman</p>
+          <img src="project2.jpg" alt="Project 2" class="project-image">
+        </div>
+      </div>
+    </article>
+
+    <article id="multimedia">
+      <h2>MULTIMEDIA</h2>
+      <div class="multimedia-content">
+        <div class="multimedia-box">
+          <p><strong>Audio:</strong> I Think They Call This Love - Elliot James Reay</p>
+          <audio controls>
+            <source src="Audio.mp3" type="audio/mp3">
+          </audio>
+          <p><strong>Deskripsi:</strong></p>
+          <p class="description">Lagu "I Think They Call This Love" karya Elliot James Reay menggambarkan perasaan cinta yang mendalam dan kompleks...</p>
+        </div>
+        <div class="multimedia-box">
+          <p><strong>Video 1:</strong> Disney’s MOANA 2</p>
+          <video controls>
+            <source src="video1.mp4" type="video/mp4">
+          </video>
+          <p><strong>Deskripsi:</strong></p>
+          <p class="description">Disney’s MOANA 2 adalah sekuel dari film animasi populer "Moana."...</p>
+        </div>
+      </div>
+    </article>
+
+    <section id="kontak" class="contact-form">
+      <h2>Formulir Kontak</h2>
+      <form onsubmit="return validateForm()">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" placeholder="masukan nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="masukan email" required>
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..." required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <section id="guestbook" class="guestbook">
+      <h2>Buku Tamu</h2>
+      <form onsubmit="return addEntry()">
+        <label for="guest-name">Nama:</label>
+        <input type="text" id="guest-name" placeholder="Masukkan nama Anda..." required>
+        <label for="guest-message">Pesan:</label>
+        <textarea id="guest-message" placeholder="Tulis pesan Anda di sini..." required></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+      <h3>Daftar Tamu:</h3>
+      <div id="guestbook-entries" class="guestbook-list" style="display: none;"></div>
+    </section>
+
+    <article id="media-api">
+      <h2>Application Programming Interface API (Pexels)</h2>
+      <div id="media-api-content" class="multimedia-content">
+        <div class="multimedia-box">
+          <p><strong>Foto Sunset 1:</strong></p>
+          <img src="https://pfst.cf2.poecdn.net/base/image/cd2e532d9ce8bd88a547b9191614274bbecb39962b8c696942274b9f9b5d7ee2?w=1024&h=768&pmaid=366100765" alt="Sunset 1" style="width:100%; border-radius:5px;">
+        </div>
+        <div class="multimedia-box">
+          <p><strong>Foto Sunset 2:</strong></p>
+          <img src="https://pfst.cf2.poecdn.net/base/image/04af4f87b72a68dbb0cf9ec5945f47001737e93aa0b30b94be14d53027545214?w=1024&h=768&pmaid=366100993" alt="Sunset 2" style="width:100%; border-radius:5px;">
+        </div>
+        <div class="multimedia-box">
+          <p><strong>Video Ombak:</strong></p>
+          <video controls style="width:100%; border-radius:5px;">
+            <source src="Ombak1.mp4" type="video/mp4">
+            Video tidak dapat dimuat.
+          </video>
+        </div>
+        <div class="multimedia-box">
+          <p><strong>Video Ombak:</strong></p>
+          <video controls style="width:100%; border-radius:5px;">
+            <source src="Ombak2.mp4" type="video/mp4">
+            Video tidak dapat dimuat.
+          </video>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>Hubungi Kami</p>
+    <p><a href="https://www.instagram.com/_ren.vp_/" target="_blank" style="text-decoration: none; color: inherit;">Instagram: _ren.vp_</a></p>
+    <p>email : laurensia.putri23@student.uisi.ac.id</p>
+    <p>&copy; 2025 LawrenceChrome.com</p>
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (!name || !email || !message) {
+        alert('Semua field harus diisi!');
+        return false;
+      }
+      return true;
+    }
+
+    function addEntry() {
+      const guestName = document.getElementById('guest-name').value;
+      const guestMessage = document.getElementById('guest-message').value;
+      if (!guestName || !guestMessage) {
+        alert('Semua field harus diisi!');
+        return false;
+      }
+      const entryDiv = document.createElement('div');
+      entryDiv.classList.add('guestbook-entry');
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Hapus';
+      deleteButton.onclick = function () {
+        if (confirm('Yakin ingin menghapus pesan ini?')) {
+          entryDiv.remove();
+        }
+      };
+      entryDiv.innerHTML = `<strong>${guestName}</strong><p>${guestMessage}</p>`;
+      entryDiv.appendChild(deleteButton);
+      document.getElementById('guestbook-entries').appendChild(entryDiv);
+      document.getElementById('guest-name').value = '';
+      document.getElementById('guest-message').value = '';
+      document.getElementById('guestbook-entries').style.display = 'block';
+      return false;
+    }
+  </script>
+</body>
+</html>
